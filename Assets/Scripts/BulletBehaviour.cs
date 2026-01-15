@@ -23,7 +23,7 @@ public class BulletBehaviour : MonoBehaviour
         if (collisionEnemyComponent != null)
         {
 
-            collisionEnemyComponent.myHpManager.RemoveHp(dammage);
+            collisionEnemyComponent.myHpManager.RemoveHp(dammage,0);
             Destroy(gameObject);
         }
     }

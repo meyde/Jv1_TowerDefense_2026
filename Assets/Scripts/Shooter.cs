@@ -42,19 +42,29 @@ public class Shooter : MonoBehaviour
         newBullet.dammage = dammage;
         newBullet.spriteRenderer.color = bulletColor;
         newBullet.transform.position = transform.position;
-        // Vous pouvez changer cette fonction pour changer ce qu'il se passe quand on tire
     }
 
+    private void BowTarget()
+    {
+        var minPos = 0;
+        var i = 0;
+        foreach (EnemyContainer enemy in enemiesInRange)
+        {
+            i += 1;
+            if (enemy.myHpManager.currentHP < enemiesInRange[minPos].myHpManager.currentHP) { minPos = i; };
+        }
+        targetEnemy =enemiesInRange[minPos];
+
+    }
     private void SetTargetEnemy()
     {
-        // Vous pouvez changer cette fonction pour changer l'ennemi a target en priorité
         if(enemiesInRange.Count<=0)
         {
             targetEnemy = null;
         }
         else
         {
-            targetEnemy = enemiesInRange[0];
+            BowTarget();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
