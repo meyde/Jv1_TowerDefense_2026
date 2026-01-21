@@ -11,9 +11,9 @@ public class BulletBehaviour : MonoBehaviour
     {
         if (targetEnemy == null)
         {
-               Destroy(gameObject);
+            Destroy(gameObject);
         }
-        transform.position = Vector3.MoveTowards(transform.position, targetEnemy.transform.position, speed);    
+        else { transform.position = Vector3.MoveTowards(transform.position, targetEnemy.transform.position, speed); };    
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

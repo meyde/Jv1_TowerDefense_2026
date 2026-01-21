@@ -50,8 +50,9 @@ public class Shooter : MonoBehaviour
         var i = 0;
         foreach (EnemyContainer enemy in enemiesInRange)
         {
-            i += 1;
+
             if (enemy.myHpManager.currentHP < enemiesInRange[minPos].myHpManager.currentHP) { minPos = i; };
+            i++;
         }
         targetEnemy =enemiesInRange[minPos];
 

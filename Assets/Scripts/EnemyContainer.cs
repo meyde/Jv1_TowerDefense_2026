@@ -9,7 +9,7 @@ public class EnemyContainer : MonoBehaviour
     public SplineAnimate mySplineAnimate;
     public HpManager myHpManager;
 
-    public int timeToPath;
+    public int speed;
     public int HpMax;
 
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class EnemyContainer : MonoBehaviour
     {
         myHpManager.maxHP = HpMax;
         mySplineAnimate.Container = FindFirstObjectByType<SplineContainer>();
-        mySplineAnimate.Duration = timeToPath + Random.Range(-3,3);
+        mySplineAnimate.MaxSpeed = speed;
         mySplineAnimate.Play();
     }
 
