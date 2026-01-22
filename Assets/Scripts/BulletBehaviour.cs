@@ -5,6 +5,7 @@ public class BulletBehaviour : MonoBehaviour
     public EnemyContainer targetEnemy;
     public float speed = 0.2f;
     public int dammage;
+    public int damageType;
     public SpriteRenderer spriteRenderer;
 
     void Update()
@@ -13,7 +14,6 @@ public class BulletBehaviour : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        else { transform.position = Vector3.MoveTowards(transform.position, targetEnemy.transform.position, speed); };    
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,7 +23,7 @@ public class BulletBehaviour : MonoBehaviour
         if (collisionEnemyComponent != null)
         {
 
-            collisionEnemyComponent.myHpManager.RemoveHp(dammage,0);
+            collisionEnemyComponent.myHpManager.RemoveHp(dammage,damageType);
             Destroy(gameObject);
         }
     }

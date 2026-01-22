@@ -4,6 +4,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EnemyWave", menuName = "Scriptable Objects/EnemyWave")]
 public class EnemyWave : ScriptableObject
 {
-    public List<GameObject> enemiesInWave;
+    public List<EnemyContainer> enemiesInWave;
     public float waitTime = 2;
 }

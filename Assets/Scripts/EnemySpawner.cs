@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -15,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
     {
         var currentWave = wavesList[Random.Range(0, wavesList.Count)];
         
-        foreach(GameObject enemy in currentWave.enemiesInWave)
+        foreach(EnemyContainer enemy in currentWave.enemiesInWave)
         {
             Instantiate(enemy,transform);
             yield return new WaitForSeconds(currentWave.waitTime);

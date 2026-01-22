@@ -9,7 +9,7 @@ public class EnemyContainer : MonoBehaviour
     public SplineAnimate mySplineAnimate;
     public HpManager myHpManager;
 
-    public int speed;
+    public float speed;
     public int HpMax;
 
     // Start is called before the first frame update
