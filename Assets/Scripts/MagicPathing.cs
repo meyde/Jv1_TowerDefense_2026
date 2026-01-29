@@ -9,11 +9,12 @@ public class MagicPathing : MonoBehaviour
 
     private void Start()
     {
-        targetDirection = (mbb.targetEnemy.transform.position - transform.position);
+        
     }
     // Update is called once per frame
     void Update()
     {
+        targetDirection = (mbb.targetEnemy.transform.position - transform.position);
         transform.position += targetDirection * mbb.speed;
     }
 }

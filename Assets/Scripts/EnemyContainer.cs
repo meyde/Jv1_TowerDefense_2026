@@ -12,7 +12,6 @@ public class EnemyContainer : MonoBehaviour
     public float speed;
     public int HpMax;
 
-    // Start is called before the first frame update
     void Awake()
     {
         myHpManager.maxHP = HpMax;

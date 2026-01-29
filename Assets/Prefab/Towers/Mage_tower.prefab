@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3851027027566688718}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.6610787, y: 3.0294106, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.44, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -122,12 +122,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.15}
-  m_Radius: 1.3599999
+  m_Offset: {x: -0.01, y: 0.26999998}
+  m_Radius: 2.8599997
 --- !u!114 &9161467990042418136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +142,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Shooter
   enemiesInRange: []
   targetEnemy: {fileID: 0}
-  shootTime: 3
-  dammage: 10
-  bulletColor: {r: 0, g: 0, b: 0, a: 0}
+  shootTime: 1.5
+  damage: 16
+  bulletColor: {r: 0.6226415, g: 0.032306872, b: 0.6146597, a: 1}
+  cost: 0
   bulletPrefab: {fileID: 3130204848571874220, guid: 8c146538de3b4e649bb0382d28715ba9, type: 3}
+  type: 1

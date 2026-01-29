@@ -3,11 +3,15 @@ using UnityEngine;
 public class TowerSpawn : MonoBehaviour
 {
     public GameObject towerPrefab;
+    private ShopManager shopManager;
+
+    private void Start()
+    {
+        shopManager = FindFirstObjectByType<ShopManager>();
+    }
+
     private void OnMouseDown()
     {
-        print("dbug");
-        var tower = Instantiate(towerPrefab);
-        tower.transform.position = transform.position;
-        Destroy(gameObject);
+        shopManager.OpenShop(this);
     }
 }
