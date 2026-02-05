@@ -8,7 +8,6 @@ public class Shooter : MonoBehaviour
     public EnemyContainer targetEnemy;
     public float shootTime;
     public int damage;
-    public Color bulletColor;
     public int cost;
     public BulletBehaviour bulletPrefab;
     public int type;
@@ -43,7 +42,6 @@ public class Shooter : MonoBehaviour
      
         newBullet.targetEnemy = targetEnemy;
         newBullet.damage = damage;
-        newBullet.spriteRenderer.color = bulletColor;
         newBullet.transform.position = transform.position;
     }
 
@@ -78,6 +76,10 @@ public class Shooter : MonoBehaviour
         }
         else 
         if (type ==1)
+        {
+            MagicTarget();
+        }
+        if (type == 2)
         {
             MagicTarget();
         }

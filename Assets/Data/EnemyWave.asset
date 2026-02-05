@@ -63,4 +63,4 @@ MonoBehaviour:
   - {fileID: 8979410002054373570, guid: 8177b6a7613d5274ca60a9452ed12234, type: 3}
   - {fileID: 8979410002054373570, guid: 8177b6a7613d5274ca60a9452ed12234, type: 3}
   - {fileID: 8979410002054373570, guid: 8177b6a7613d5274ca60a9452ed12234, type: 3}
-  waitTime: 1
+  waitTime: 0.2

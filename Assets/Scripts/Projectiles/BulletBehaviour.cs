@@ -6,7 +6,9 @@ public class BulletBehaviour : MonoBehaviour
     public float speed = 0.2f;
     public int damage;
     public int damageType;
-    public SpriteRenderer spriteRenderer;
+    public bool isBomb;
+    public GameObject explosion;
+    public int radius = 100;
 
     void Update()
     {
@@ -22,9 +24,17 @@ public class BulletBehaviour : MonoBehaviour
 
         if (collisionEnemyComponent != null)
         {
-
-            collisionEnemyComponent.myHpManager.RemoveHp(damage,damageType);
-            Destroy(gameObject);
+            if (!isBomb)
+            {
+                collisionEnemyComponent.myHpManager.RemoveHp(damage, damageType);
+                Destroy(gameObject);
+            }
+            else
+            {
+               
+                Instantiate(explosion, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
         }
     }
 }
